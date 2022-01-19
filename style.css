@@ -1,0 +1,474 @@
+body {
+  margin: 0;
+  background-color: rgb(235, 234, 234);
+  font-family: arial;
+}
+
+/* INÍCIO BARRA SUPERIOR */
+
+.barraAlta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  padding: 0 40px;
+}
+
+.barraAlta a {
+  text-decoration: none;
+}
+
+.barraAlta .azul {
+  color: #005cef;
+}
+
+.barraAlta .vermelho {
+  color: #a80000;
+}
+
+.barraAlta .verde {
+  color: #06aa48;
+}
+
+.barraAlta .laranja {
+  color: #ff7f00;
+}
+
+.barraAlta ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.barraAlta ul li {
+  padding: 10px;
+}
+
+.barraAlta .esquerda li {
+  font-weight: bold;
+  padding: 0;
+}
+
+.barraAlta .esquerda li::after {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  border-right: 1px solid #ccc;
+  position: relative;
+  left: -3px;
+}
+
+.barraAlta .esquerda li:last-child::after {
+  border: 0;
+}
+
+.barraAlta .esquerda li a {
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.barraAlta .esquerda li a:hover {
+  border-top: 3px solid;
+}
+
+.barraAlta .direita li a {
+  color: #999;
+}
+
+.barraAlta .direita li a:hover {
+  color: #1063e0;
+}
+
+.barraAlta .direita li,
+.barraAlta .direita button {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cabecalho {
+  background-color: #06AA48;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo svg {
+  width: 48px;
+  height: 40px;
+}
+
+.busca input {
+  padding: 8px;
+  border: 0;
+  border-radius: 3px;
+  background-color: rgba(0,0,0,0.15);
+  width: 160px;
+  transition: width 0.3s ease;
+}
+
+.busca input::placeholder {
+  color: white;
+}
+
+.busca input:focus {
+  background-color: #fff;
+  outline: 0;
+  width: 200px;
+}
+
+.busca input:focus::placeholder {
+  color: #666;
+}
+
+/* FIM BARRA SUPERIOR */
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+text-decoration: none;
+color: black;
+}
+
+.menu-times {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.caixa {
+  display: flex;
+  align-items: center;
+}
+
+.primeira {
+  padding-right: 23px;
+}
+
+.primeira::after {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  border-right: 1px dotted rgba(256, 256, 256, 0.5);
+  position: relative;
+  left: 23px;
+}
+
+.segunda {
+  padding-left: 23px;
+}
+
+.img-menu {
+  width: 30px;
+  margin-right: 4px;
+}
+
+.img-times {
+  width: 24px;
+  margin-right: 7px;
+}
+
+.img-cartola{
+  background-size: 105px 32px;
+  width: 105px;
+  height: 36px;
+  min-width: 105px;
+}
+.cartola {
+  background-color: white;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+.texto-cartola {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+.assine-cartola {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  min-height: 48px;
+  border: 1px solid rgb(184, 176, 176);
+  border-radius: 2px;
+}
+
+.assine-cartola a {
+  color: #FF7400;
+  padding-right: 24px;
+  padding-left: 24px;
+  white-space: nowrap;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: -.3px;
+  text-decoration: none;
+}
+
+input [type="checkbok"] {
+  display: flex;
+}
+
+/* 
+1 Quadradinho branco
+2 Os dois nomes dentro do quadradinho, um em cima do outro
+3 Cor do texto
+4 Fica azul e linha do lado azul quando passa o mouse
+5 Setinha pra cima
+6 Aparecer e desaparecer
+*/
+
+.barraAlta ul.videos-popup {
+  display:none;
+  position:absolute;
+  background-color: white;
+  font-size: 12px;
+  border:1px solid #ccc;
+  border-radius: 4px;
+  padding-bottom: 8px;
+}
+
+.barraAlta ul.videos-popup li {
+  padding: 8px 5px 2px 5px;
+}
+
+.barraAlta ul.videos-popup a {
+  color:#999;
+}
+
+.barraAlta ul.videos-popup li::after {
+  display: none;
+}
+
+.barraAlta ul.videos-popup a:hover {
+  border-top: 0;
+  color: #1063e0;
+  
+}
+
+.videos-item:hover {
+  cursor: pointer;
+}
+
+.videos-item:hover .videos-popup {
+  display: block;
+}
+
+.vasco {
+  padding: 60px;
+  display:block;
+  position:relative;
+  
+}
+.vasco img{
+  width: 590px;
+  height: 370px;
+  border-radius: 6px;
+}
+
+.vasco .caixa-imagem {
+  width: 590px;
+  height: 370px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.vasco .caixa-imagem-margem {
+  margin-right: 10px;
+}
+
+.texto-esquerda{
+  text-shadow: 0px 0px 5px black;
+  position: absolute;
+  color: white;
+  top: 280px;
+  font-size: 27px;
+  left:18px;
+  padding: 0px;
+}
+
+.texto-direita {
+  text-shadow: 0px 0px 5px black;
+  position: absolute;
+  color: white;
+  top: 260px;
+  font-size: 27px;
+  left: 20px;
+  padding: 0;
+}
+
+/* 
+margem OK
+tamanho da fonte
+cor
+efeito da lista
+passar o mouse
+textinho lá em baixo
+*/
+
+.imagem-pequena {
+  justify-content: space-between;
+  margin:39px;
+  display: flex;
+}
+
+.imagem-pequena img {
+  width: 350px;
+  height: 220px;
+}
+
+.texto-lado {
+  margin-left: 20px;
+  text-align: left;
+  line-height: 1.7;
+  
+ }
+
+.texto-lado ul {
+  margin-left: 18px;
+}
+
+.texto-lado li {
+  font-size: 15px;
+  color: #777;
+}
+
+.texto-lado li a {
+  color: #06aa48;
+  
+}
+
+.texto-lado .noticia-horario {
+  font-size: 13px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.noticia-titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #06aa48;
+  display: block;
+}
+
+.texto-lado a:hover {
+  color: #05903d;
+  cursor: pointer;
+}
+
+.parte-baixa {
+  display: flex;
+}
+
+.tabela-lateral {
+  padding: 15px;
+}
+
+.classificacao {
+  display: flex;
+  justify-content: end;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.classificacao td, .classificacao th {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.bolinhas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.bolinhas li {
+  display: block;
+  margin-right: 3px;
+  width: 5px;
+  height: 5px;
+  background-color: #999;
+  border-radius: 100%;
+}
+
+.bolinhas li.verde {
+  background-color:green;
+}
+
+.bolinhas li.vermelha {
+  background-color: red;
+}
+ 
+.rodape {
+  background-color: #06AA48;
+  width:auto;
+  height:100px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ .esquerda-rodape {
+  display: flex;
+  justify-content:space-between;
+}
+
+.rodape ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.rodape li::after{
+  content: "";
+  display: inline-block;
+  height: 10px;
+  border-right: 1px solid #ccc;
+  position: relative;
+  left: -3px;
+  box-sizing: inherit;
+}
+.rodape li:first-child::after {
+  content: initial;
+}
+.rodape li:last-child::after {
+  content: initial;
+}
+.rodape a{
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+}
+.ge-rodape{
+  margin-right: 20px;
+  padding-top: 10px;
+}
+.img-rodape{
+  width: 40px;
+}
+.texto-rodape{
+  color:white;
+  font-size: 13px;
+}
